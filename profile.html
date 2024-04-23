@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="signup.css">
+  <link rel="script.js" href="reg.js">
+</head>
+<body>
+    <a href="home.html">home</a>
+  <div class="profile-container">
+    <h2>User Profile</h2>
+    <form id="profile-form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <p id="username"></p>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" disabled>
+      </div>
+      <div class="form-group">
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" disabled></textarea>
+      </div>
+      <button type="button" id="edit-btn">Edit Profile</button>
+      <button type="button" id="logout-btn">Log out</button>
+
+      <button type="submit" id="save-btn" style="display: none;">Save Changes</button>
+
+    </form>
+  </div>
+  <script src="profile.js"></script>
+</body>
+</html>
