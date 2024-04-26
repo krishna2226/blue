@@ -4,37 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
-  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="formsignup.css">
 </head>
-<body>
-    <a href="home.html">home</a>
-  <div class="login-container">
-    <h2>Login</h2>
-    <form id="login-form">
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <input type="hidden" id="isLoggedIn" name="isLoggedIn" value="false">
-      <input type="hidden" id="L_username" name="L_username" value="false"> <!-- Hidden input field -->
-
-      <button type="submit" id="login">Login</button>
-      <br>
-      New user? <a href="formsignup.html">sign up here</a>
-    </form>
-    <p id="error-msg" class="error-msg"></p>
-    <p id="login-msg" class="login-msg"></p>
-
+<body class="class11">
+<header class="class2">
+  <div class="container">
+      <nav>
+          <ul>
+              <li><a href="home.html">home</a></li>
+          </ul>
+      </nav>
   </div>
-  <script src="reg.js"></script>
+</header>
   
-  <script src="login.js"></script>
-  
-
-  
+<div class="login-container">
+  <h2>Login</h2>
+  <form id="login-form">
+    <div class="form-group">
+      <br>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+    </div><br>
+    <div class="form-group">
+      <label for="password">Password:&nbsp;</label>
+      <input type="password" id="password" name="password" required>
+    </div><br>
+    <input type="hidden" id="isLoggedIn" name="isLoggedIn" value="false">
+    <input type="hidden" id="L_username" name="L_username" value="false"> <!-- Hidden input field -->
+    <button type="submit" id="login">Login</button>
+    <br><br>
+    New user? <a href="formsignup.html" class="class1">Sign up here</a>
+  </form><br>
+  <p id="error-msg" class="error-msg"></p>
+  <p id="login-msg" class="login-msg"></p>
+</div>
+<script src="reg.js"></script>
+<script src="login.js"></script>
 </body>
 </html>
