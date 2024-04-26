@@ -1,0 +1,29 @@
+.aa{
+    color: rgb(12, 48, 58);
+}
+a{
+    color:rgb(67, 48, 25);
+}
+a:hover{
+    color:rgb(185, 160, 160);
+}
+.abc{
+    float: right;
+    width:57%;
+    border: 3px solid rgb(67, 48, 25);
+    padding: 10px;
+    margin: 10px;
+    text-align: center
+}
+.cba{
+    border: 3px solid rgb(67, 48, 25);
+    padding: 10px;
+    margin: 10px;
+    text-align: center
+}
+hr{
+    border: 1.5px solid rgb(67, 48, 25);
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
