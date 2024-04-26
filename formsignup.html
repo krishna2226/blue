@@ -4,32 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up Page</title>
-  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="formsignup.css">
 </head>
 <body>
-    <a href="home.html">home</a>
-
+  
+<header class="class2">
+  <div class="container">
+     
+      <nav>
+          <ul>
+              <li><a href="home.html">home</a></li>
+          </ul>
+      </nav>
+  </div>
+</header>
+   
+<section>
   <div class="signup-container">
     <h2>Sign Up</h2>
     <form id="signup-form">
-      <div class="form-group">
-        <label for="new-username">Username:</label>
+      <div class="form-group"  style="padding-left:20px;">
+        <label for="new-username">Enter Username:</label>
         <input type="text" id="new-username" name="new-username" required>
       </div>
-      <div class="form-group">
-        <label for="new-password">Password:</label>
+      <br><br>
+      <div class="form-group"  style="padding-left:20px;">
+        <label for="new-password">Enter Password:&nbsp; </label>
         <input type="password" id="new-password" name="new-password" required>
-      </div>
-      <button type="submit" id="signup">Sign Up</button> 
-      <p id="signup-msg" class="signup-msg"></p>
-      <br> If already registered, <a href="login.html">click here to login</a>
-
+      </div><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="signup">Sign Up</button> 
+      <p id="signup-msg" class="signup-msg"></p><br>
+      <br> If already registered, <a href="login.html" class="class1">login here.</a>
+      <br>
     </form>
-    
+    <br>
+  
   </div>
+</section>
   <script src="reg.js"></script>
   <script src="signup.js"></script>
- 
+
 
 </body>
 </html>
