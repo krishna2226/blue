@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disease Prediction</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('C:/Users/91934/OneDrive/Desktop/back2.png');
+    background-size: cover; /* This ensures the background image covers the entire viewport */
+    background-repeat: no-repeat; /* This prevents the background image from repeating */
+    background-position: center; /* This centers the background image */
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    .image-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .symptom-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .description {
+        font-style: italic;
+        margin-top: 10px;
+        color: #555;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Disease Prediction</h1>
+        <form id="symptomForm">
+            <label for="bodilyPains">Bodily Pains:</label>
+            <input type="checkbox" id="bodilyPains" name="symptom" value="bodilyPains">
+            <label for="diabetes">Diabetes:</label>
+            <input type="checkbox" id="diabetes" name="symptom" value="diabetes">
+            <label for="recentSurgery">Recent Surgery:</label>
+            <input type="checkbox" id="recentSurgery" name="symptom" value="recentSurgery">
+            <label for="spondylitis">Spondylitis:</label>
+            <input type="checkbox" id="spondylitis" name="symptom" value="spondylitis"><br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"><br><br>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br><br>
+            <label for="bmi">BMI:</label>
+            <input type="number" id="bmi" name="bmi"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <div class="image-container" id="imageContainer"></div>
+    </div>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById("symptomForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get selected symptoms
+            const symptoms = Array.from(document.querySelectorAll('input[name="symptom"]:checked')).map(symptom => symptom.value);
+            const age = parseInt(document.getElementById('age').value);
+            const gender = document.getElementById('gender').value;
+            const bmi = parseInt(document.getElementById('bmi').value);
+
+            // Generate image and description based on selected symptoms
+            const imageContainer = document.getElementById('imageContainer');
+            imageContainer.innerHTML = ''; // Clear previous images
+
+            if (symptoms.length > 0) {
+                const imageSrc = getImageSrc(symptoms);
+                const description = getDescription(symptoms);
+
+                const imageElement = document.createElement('img');
+                imageElement.classList.add('symptom-image');
+                imageElement.src = imageSrc;
+                imageContainer.appendChild(imageElement);
+
+                const descriptionElement = document.createElement('p');
+                descriptionElement.textContent = description;
+                descriptionElement.classList.add('description');
+                imageContainer.appendChild(descriptionElement);
+
+                // Store result in localStorage
+                localStorage.setItem('yogaPoseDescription', description);
+            } else {
+                imageContainer.textContent = 'Please select at least one symptom.';
+            }
+        });
+
+        // Function to get image source based on selected symptoms
+        function getImageSrc(symptoms) {
+            // Example mapping of symptoms to image sources
+            const imageMap = {
+                bodilyPains: 'C:/Users/91934/OneDrive/Desktop/yoga1.avif',
+                diabetes: 'C:/Users/91934/OneDrive/Desktop/yoga2.jpg',
+                recentSurgery: 'C:/Users/91934/OneDrive/Desktop/yoga3.webp',
+                spondylitis: 'C:/Users/91934/OneDrive/Desktop/yoga4.jpg',
+                bodilyPains_diabetes:'C:/Users/91934/OneDrive/Desktop/yoga5.jpg',
+                bodilyPains_recentSurgery: 'C:/Users/91934/OneDrive/Desktop/yoga6.jpg',
+                bodilyPains_spondylitis: 'C:/Users/91934/OneDrive/Desktop/yoga7.jpg',
+                diabetes_recentSurgery: 'C:/Users/91934/OneDrive/Desktop/yoga8.webp',
+                diabetes_spondylitis: 'C:/Users/91934/OneDrive/Desktop/yoga.9.jpg',
+                recentSurgery_spondylitis: 'C:/Users/91934/OneDrive/Desktop/yoga10.webp',
+                bodilyPains_diabetes_recentSurgery: 'C:/Users/91934/OneDrive/Pictures/Screenshots/yoga11.png',
+                bodilyPains_diabetes_spondylitis: 'C:/Users/91934/OneDrive/Desktop/yoga12.jpg',
+                bodilyPains_recentSurgery_spondylitis: 'C:/Users/91934/OneDrive/Desktop/yoga13.jpg',
+                diabetes_recentSurgery_spondylitis: 'C:/Users/91934/OneDrive/Desktop/yoga14.jpg',
+                bodilyPains_diabetes_recentSurgery_spondylitis: 'C:/Users/91934/OneDrive/Desktop/yoga15.jpg'
+            };
+
+            // Generate a unique key for the combination of symptoms
+            const key = symptoms.sort().join('_');
+            const defaultImage = 'https://via.placeholder.com/300'; // Default image if no specific combination is found
+
+            // Return image source based on key
+            return imageMap[key] || defaultImage;
+        }
+
+        // Function to get description based on selected symptoms
+        function getDescription(symptoms) {
+            // Example mapping of symptoms to descriptions
+            const descriptionMap = {
+                bodilyPains: 'Twisted figure pose for relieving general bodily pains. This asana can be performed by people of all ages. But make sure to do it on the yoga mat to avoid knee pain',
+                diabetes: 'Bujangasana is beneficial for diabetes management. Try to hold the pose for 1min before going to savasana. Do not overexert',
+                recentSurgery: 'Donot go for yoga poses which are staining. Instead try restorative yoga. Recommended to do with caution with professional guidance',
+                spondylitis: 'Machyasana for relieving spondylitis. You can choose to keep pillow(or soft mattress) under your head. Keep neck muscle strain minimum. This pose also helps for thyroid',
+                bodilyPains_diabetes: 'Dhanurasana is used to relive general body pains and also for managing diabetes. This pose might be difficult at the beginning, so it can be partially but try to hold for 30sec',
+                bodilyPains_recentSurgery: 'Marjaryasana for managing spondylitis. Do it couple to times but remember to do it in moderation. For this pose it is not about the difficulty but the persistance. Do it regulary when on empty stomach',
+                bodilyPains_spondylitis: 'Salabasana for managing spondylitis.',
+                diabetes_recentSurgery: 'Purvottasana for managing spondylitis.',
+                diabetes_spondylitis: 'Balasana for managing spondylitis.',
+                recentSurgery_spondylitis: 'Supta Vajrasana for managing spondylitis.',
+                bodilyPains_diabetes_recentSurgery: 'Spinal Twist for managing spondylitis.',
+                bodilyPains_diabetes_spondylitis: 'Supine Twist for managing spondylitis.',
+                bodilyPains_recentSurgery_spondylitis: 'Variation of Ekapadasana for managing spondylitis.',
+                diabetes_recentSurgery_spondylitis: 'Virabhadrasana for managing spondylitis.',
+                bodilyPains_diabetes_recentSurgery_spondylitis: 'Vrukshasana for managing spondylitis.'
+            };
+
+            // Generate a unique key for the combination of symptoms
+            const key = symptoms.sort().join('_');
+            const defaultDescription = 'Yoga pose for overall wellness.'; // Default description if no specific combination is found
+
+            // Return description based on key
+            return descriptionMap[key] || defaultDescription;
+        }
+    </script>
+</body>
+</html>
