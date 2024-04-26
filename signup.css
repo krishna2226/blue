@@ -1,91 +1,292 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Body styles */
+body  {
+    font-family:'Trebuchet MS';
+    background-color:honeydew;
+    background-image: url('yoga3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-position: center;
+    font-size: 18px;
+}
+.class10{
+    background-image: url('yoga7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.class11{
+    background-image: url('yoga8.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Header styles */
+header {
+    background-color: #3893b4ab;
+    color: #060000;
+    padding: 20px 0;
+   
+}
+
+
+header .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-  }
+    
+
+}
+
+header h1 {
+    font-size: 40px;
   
-  .signup-container {
-    background-color: #fff;
-    padding: 20px;
+}
+header h1:hover{
+    text-shadow: 0 0 5px #fff,
+
+    0 0 10px #fff,
+
+    0 0 20px rgb(234, 240, 234),
+
+    0 0 30px rgb(233, 238, 233),
+
+    0 0 40px rgb(243, 249, 243),
+
+    0 0 55px rgb(226, 232, 226),
+
+    0 0 70px rgb(235, 242, 235);
+    transition: all 0.3s ease;
+
+
+}
+
+header nav ul {
+    list-style-type: none;
+   
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+   
+}
+
+header nav ul li a {
+    color: #0d0000;
+    text-decoration:none;
+    font-weight:900;
+    background-color: rgba(255, 255, 255, 0.538);
+    border-radius: 3px;
+    padding: 2px;
+    font-size: 20px;
+    
+    
+}
+header nav ul li a:hover{
+    border:#dde5dd92 2px solid ;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-group {
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .signup-msg {
-    margin-top: 10px;
-  }
-  
-  .profile-container {
-    max-width: 400px;
-    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)x;
+    padding:10px;
+    transition: all 0.4s ease;
+}
+
+
+
+/* Main container styles */
+.signup-container,.login-container,.profile-container {
+    max-width: 650px;
+    margin: 100px auto;
+   
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 5px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea {
+    background-color: #ffffff90;
+    
+    
+}
+#signup-form,#login-form,#profile-form{
+    padding:0 150px;
+}
+
+
+/* Section styles */
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    background-color:rgba(13, 199, 246, 0.455) ;
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 2px;
+    padding: 2px;
+    padding-left: 10px;
+    position: relative; 
+}
+
+h2::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background-color: rgba(18, 44, 67, 0.422) ;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+h2:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+h2:hover{
+    text-shadow: 0 0 5px #fff,
+
+    0 0 10px #fff,
+
+    0 0 20px rgb(234, 240, 234,0.5),
+
+    0 0 30px rgb(233, 238, 233,0.5),
+
+    0 0 40px rgb(243, 249, 243,0.5),
+
+    0 0 55px rgb(226, 232, 226,0.5),
+
+    0 0 70px rgb(235, 242, 235,0.5);
+    transition: all 0.3s ease;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 50%;
+  padding: 4px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* For screens smaller than 768px (tablets) */
+@media screen and (max-width: 768px) {
+    .signup-container,.login-container,.profile-container {
+      margin: 50px auto; /* Center the form */
+      width: 80%; /* Adjust width */
+      padding: 20px;
+    }
+    #signup-form,#login-form,#profile-form {
+      padding: 0; /* Remove horizontal padding */
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 80%; /* Full width */
+      padding-left: 20px;
+    }
   }
   
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  /* For screens smaller than 480px (phones) */
+  @media screen and (max-width: 480px) {
+    .signup-container {
+        
+      background-size: auto;
+      margin: 30px auto; /* Center the form */
+      width: 90%; /* Adjust width */
+    }
   }
   
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+#signup,#login,#edit-btn,#save-btn,#logout-btn{
+    background-color:rgb(47, 90, 107) ;
+    color:lightyellow;
+    width:100px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 20px;
+   
+
+}
+#signup:hover,#login:hover,#edit-btn:hover,#save-btn:hover,#logout-btn:hover{
+    background-color:rgb(18, 44, 67) ;
+    text-shadow: 0 0 5px #fff,
+
+    0 0 10px #fff,
+
+    0 0 20px rgb(234, 240, 234,0.2),
+
+    0 0 30px rgb(233, 238, 233,0.2),
+
+    0 0 40px rgb(243, 249, 243,0.2),
+
+    0 0 55px rgb(226, 232, 226,0.2),
+
+    0 0 70px rgb(235, 242, 235,0.2);
+    transition: all 0.3s ease;
+
+
+}
+.class1{
+    text-decoration: none;
+    color: #0d0000;
+}
+.class1:hover{
+    text-decoration:underline;
+    background-color:lightcyan ;
+}
+
+/*login page:-
+
+.login-container {
+    max-width: 650px;
+    margin: 100px auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #ffffff90;
+    padding: 20px;
+}
+*/
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .login-container {
+        
+        margin: 50px auto;
+        width: 80%;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        width: 80%;
+        padding-left: 20px;
+    }
+    #login,#signup{
+        margin-left:0px ;
+        
+
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .login-container {
+        background-size: auto;
+        margin: 30px auto;
+        width: 90%;
+    }
+    #login,#signup{
+       
+        margin-left:250px;
+
+    }
+}
+ 
