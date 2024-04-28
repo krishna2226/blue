@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var editBtn = document.getElementById('edit-btn');
     var saveBtn = document.getElementById('save-btn');
     var logoutBtn = document.getElementById('logout-btn');
-    var formFields = document.querySelectorAll('#profile-form input, #profile-form textarea');
+    var formFields = document.querySelectorAll('#profile-form input, #profile-form textarea','#profile-form select');
   
     // Check if user is logged in
     var isLoggedIn = localStorage.getItem('isLoggedIn');
