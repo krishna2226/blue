@@ -16,7 +16,21 @@
     align-items: center;
     justify-content: center;
 }
+header :hover{
+    text-shadow: 0 0 5px #fff,
 
+    0 0 10px #fff,
+
+    0 0 20px rgb(234, 240, 234),
+
+    0 0 30px rgb(233, 238, 233),
+
+    0 0 40px rgb(243, 249, 243),
+
+    0 0 55px rgb(226, 232, 226),
+
+    0 0 70px rgb(235, 242, 235);
+    transition: all 0.3s ease;
 nav{
     width: 100%;
     position: absolute;
