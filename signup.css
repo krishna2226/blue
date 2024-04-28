@@ -28,7 +28,7 @@ body  {
 }
 /* Header styles */
 header {
-    background-color: #3893b4ab;
+    
     color: #060000;
     padding: 20px 0;
    
@@ -133,6 +133,9 @@ h2 {
     padding-left: 10px;
     position: relative; 
 }
+.proclass{
+    background-color:rgba(70, 162, 184, 0.455) ;
+}
 
 h2::before {
     content: " ";
@@ -206,7 +209,7 @@ input[type="password"] {
     }
   }
   
-#signup,#login,#edit-btn,#save-btn,#logout-btn{
+#signup,#login,#edit-btn,#logout-btn,#save-btn{
     background-color:rgb(47, 90, 107) ;
     color:lightyellow;
     width:100px;
@@ -214,6 +217,9 @@ input[type="password"] {
     border-radius: 3px;
     font-size: 20px;
    
+
+}
+#save-btn{
 
 }
 #signup:hover,#login:hover,#edit-btn:hover,#save-btn:hover,#logout-btn:hover{
@@ -236,7 +242,7 @@ input[type="password"] {
 
 }
 .class1{
-    text-decoration: none;
+    text-decoration: underline;
     color: #0d0000;
 }
 .class1:hover{
@@ -244,17 +250,6 @@ input[type="password"] {
     background-color:lightcyan ;
 }
 
-/*login page:-
-
-.login-container {
-    max-width: 650px;
-    margin: 100px auto;
-    border: 1px solid white;
-    border-radius: 5px;
-    background-color: #ffffff90;
-    padding: 20px;
-}
-*/
 
 
 /* Media queries for responsiveness */
@@ -269,7 +264,7 @@ input[type="password"] {
         width: 80%;
         padding-left: 20px;
     }
-    #login,#signup{
+    #login,#signup,#edit-btn,#save-btn{
         margin-left:0px ;
         
 
@@ -283,10 +278,24 @@ input[type="password"] {
         margin: 30px auto;
         width: 90%;
     }
-    #login,#signup{
+    #login,#signup,#edit-btn,#save-btn{
        
         margin-left:250px;
 
     }
+}
+.logo {
+    width: 100px;
+    height: auto;
+    margin: 20px;
+    
+}
+#email{
+    width:250px;
+    height: 30px;
+}
+#age{
+    width:50px;
+    height: 30px;
 }
  
