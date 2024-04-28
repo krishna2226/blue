@@ -27,3 +27,11 @@ hr{
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.logo{
+
+    width: 100px;
+    height: auto;
+    margin: 20px;
+    
+
+}
