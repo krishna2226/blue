@@ -26,6 +26,10 @@ body  {
     background-repeat: no-repeat;
     background-size: cover;
 }
+header{
+    background-color:black;
+}
+    
 
 header nav ul li a :hover{
     text-shadow: 0 0 5px #fff,
