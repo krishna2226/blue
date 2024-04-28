@@ -26,28 +26,8 @@ body  {
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* Header styles */
-header {
-    
-    color: #060000;
-    padding: 20px 0;
-   
-}
 
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-
-}
-
-header h1 {
-    font-size: 40px;
-  
-}
-header h1:hover{
+header nav ul li a :hover{
     text-shadow: 0 0 5px #fff,
 
     0 0 10px #fff,
@@ -62,41 +42,35 @@ header h1:hover{
 
     0 0 70px rgb(235, 242, 235);
     transition: all 0.3s ease;
-
-
+}
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-header nav ul {
-    list-style-type: none;
-   
+nav .logo{
+    width: 120px;
+    cursor: pointer;
+    color: aliceblue;
 }
 
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-   
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
 }
 
-header nav ul li a {
-    color: #0d0000;
-    text-decoration:none;
-    font-weight:900;
-    background-color: rgba(255, 255, 255, 0.538);
-    border-radius: 3px;
-    padding: 2px;
-    font-size: 20px;
-    
-    
+nav ul li a{
+    text-decoration: none;
+    color: azure;
+    font-size: 17px;
 }
-header nav ul li a:hover{
-    border:#dde5dd92 2px solid ;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)x;
-    padding:10px;
-    transition: all 0.4s ease;
-}
-
-
 
 /* Main container styles */
 .signup-container,.login-container,.profile-container {
