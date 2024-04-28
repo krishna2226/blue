@@ -60,7 +60,22 @@ nav ul li a{
     color: azure;
     font-size: 17px;
 }
+
+
+hr{
+    border: 1.5px solid rgb(67, 48, 25);
+}
+footer{
+    background-color: #050f33;
+    color:bisque;
+}
+.krish a{
+    color:coral;
     
+}
+.krish a:hover{
+    color:bisque;
+}
 
 .content{
     text-align: center;
