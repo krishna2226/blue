@@ -4,29 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Profile</title>
-  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="formsignup.css">
   <link rel="script.js" href="reg.js">
 </head>
 <body class="class10">
     <a href="home.html">home</a>
+    <header>
+  </header>
   <div class="profile-container">
-    <h2>User Profile</h2><br>
+    <h2 class="proclass">User Profile</h2><br>
     <form id="profile-form">
       <div class="form-group">
         <label for="username">Username:</label>
         <p id="username"></p>
       </div><br>
       <div class="form-group">
-        <label for="email">Email:</label>
+        <label for="email">Email:</label>&nbsp; &nbsp;
         <input type="email" id="email" name="email" disabled>
       </div><br>
       <div class="form-group">
-        <p></p>
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender">
-          <option value="female">Female</option>
-          <option value="male">Male</option>
-          <option value="other">Other</option>
+        <label for="age">Age: </label>&nbsp; &nbsp; &nbsp;
+        <input type="text" id="age" name="age" disabled> 
+      </div><br>
+      <div class="form-group">
+       
+        <label for="gender">Gender:</label>&nbsp;
+        <select id="gender" name="gender"  disabled>
+          <option value="female" >Female</option>
+          <option value="male" >Male</option>
+          <option value="other" >Other</option>
         </select>
       </div><br>
 
@@ -34,10 +40,12 @@
         <label for="results">Previous diseases and yoga suggested:</label>
       </div><br>
       <button type="button" id="edit-btn">Edit Profile</button>
-      <button type="button" id="logout-btn">Log out</button>
+      
 
-      <button type="submit" id="save-btn" style="display: none;">Save Changes</button>
-
+     <button type="submit" id="save-btn" style="display: none; padding-bottom:50px;">Save Changes</button> <br><br> 
+     
+     <button type="button" id="logout-btn">Log out</button>
+      
     </form>
   </div>
   <script src="profile.js"></script>
