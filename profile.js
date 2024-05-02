@@ -34,6 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       saveBtn.style.display = 'none';
       editBtn.style.display = 'block';
+      var email=document.getElementById('email').value;
+      var age=document.getElementById('age').value;
+      var gender=document.getElementById('gender').value;
+
+      registeredUsers.push({ email: email, age: age,gender:gender });
+      saveRegisteredUsers();
+      
+      
       alert('Changes saved successfully!');
     });
   
