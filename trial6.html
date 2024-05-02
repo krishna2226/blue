@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retrieving Yoga Pose Description</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        background-image: url('resback.jpg'); /* Add your image path here */
+        background-size: cover; /* Cover the entire background with the image */
+        background-position: center; /* Center the background image */
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #yogaPoseDescription {
+        font-size: 18px;
+        line-height: 1.6;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    header.class2 {
+        background-color: #3eae38;
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    header nav ul li:first-child {
+        margin-left: 0;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #741313;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+        color: #ffcc00;
+    }
+</style>
+</head>
+<body>
+<header class="class2">
+  <div class="container">
+    <nav>
+      <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="predict.html">PREDICT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="login.html">LOGIN/SIGN-UP</a></li>
+          <li><a href="profile.html">PROFILE</a></li>
+      </ul>
+  </nav>
+  </div>
+</header>
+<div class="container">
+    <h1>Retrieving Yoga Pose Description</h1>
+    <div id="yogaPoseDescription"></div>
+
+    <script>
+        // Retrieve the stored description from localStorage
+        const yogaPoseDescription = localStorage.getItem('yogaPoseDescription');
+
+        // Display the retrieved description on the page
+        const descriptionElement = document.getElementById('yogaPoseDescription');
+        if (yogaPoseDescription) {
+            descriptionElement.textContent = yogaPoseDescription;
+        } else {
+            descriptionElement.textContent = 'No yoga pose description found.';
+        }
+
+        // Redirect to another page after a certain timeout (in milliseconds)
+        const timeoutMilliseconds = 5000; // Change this value to set the timeout duration
+        setTimeout(() => {
+            window.location.href = 'yog1.html'; // Replace 'another-page.html' with the URL of the page you want to redirect to
+        }, timeoutMilliseconds);
+    </script>
+</div>
+</body>
+</html>
