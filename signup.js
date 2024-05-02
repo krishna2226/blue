@@ -1,9 +1,7 @@
-// Include the registeredUsers array from users.js
-// This assumes that users.js is included before signup.js in your HTML file
+
 document.getElementById('signup-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-    
-    // Get input values
+    event.preventDefault(); 
+ 
     var newUsername = document.getElementById('new-username').value;
     var newPassword = document.getElementById('new-password').value;
     
