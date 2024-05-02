@@ -199,32 +199,7 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-/* For screens smaller than 768px (tablets) */
-@media screen and (max-width: 768px) {
-    .signup-container,.login-container,.profile-container {
-      margin: 50px auto; /* Center the form */
-      width: 80%; /* Adjust width */
-      padding: 20px;
-    }
-    #signup-form,#login-form,#profile-form {
-      padding: 0; /* Remove horizontal padding */
-    }
-    input[type="text"],
-    input[type="password"] {
-      width: 80%; /* Full width */
-      padding-left: 20px;
-    }
-  }
-  
-  /* For screens smaller than 480px (phones) */
-  @media screen and (max-width: 480px) {
-    .signup-container {
-        
-      background-size: auto;
-      margin: 30px auto; /* Center the form */
-      width: 90%; /* Adjust width */
-    }
-  }
+
   
 #signup,#login,#edit-btn,#logout-btn,#save-btn{
     background-color:rgb(47, 90, 107) ;
@@ -269,36 +244,34 @@ input[type="password"] {
 
 
 
-/* Media queries for responsiveness */
+
 @media screen and (max-width: 768px) {
-    .login-container {
-        
-        margin: 50px auto;
-        width: 80%;
+    .signup-container, .login-container, .profile-container {
+        margin: 50px auto; 
+        width: 80%; 
+        padding: 20px;
     }
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-        width: 80%;
+    #signup-form, #login-form, #profile-form {
+        padding: 0; 
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: 80%; 
         padding-left: 20px;
     }
-    #login,#signup,#edit-btn,#save-btn{
-        margin-left:0px ;
-        
-
+    #signup, #login, #edit-btn, #save-btn {
+        margin-left: 0;
     }
-
 }
 
 @media screen and (max-width: 480px) {
-    .login-container {
+    .signup-container, .login-container, .profile-container {
         background-size: auto;
-        margin: 30px auto;
-        width: 90%;
+        margin: 30px auto; 
+        width: 90%; 
     }
-    #login,#signup,#edit-btn,#save-btn{
-       
-        margin-left:250px;
-
+    #signup, #login, #edit-btn, #save-btn {
+        margin-left: 0;
     }
 }
 .logo {
