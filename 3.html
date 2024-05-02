@@ -15,24 +15,88 @@ alt="">
 <div class="obj">
 <p>Name: Sandhi Jain</p>
 <p>Registration number: 22BCE2980</p>
-<p>Contribution: About Us page</p>
+<p>Contribution: Home page, Contact page</p>
 </div>
 <div class="obj">
 <p>Name: Krishna Manasa Kadiyam</p>
 <p>Registration Number: 22BCE3838</p>
-<p>Contribution: Contact Us page</p>
+<p>Contribution: Explore page, About page</p>
 </div>
 <div class="obj">
 <p>Name: Divyanshi B R</p>
 <p>Registration Number: 22BCE2637</p>
-<p>Contribution: System requirements page</p>
+<p>Contribution: Login/Sign-up page, Profile page</p>
 </div>
 <div class="obj">
 <p>Name: Devabhaktuni Lohitha Padmavathi</p>
 <p>Registration number: 22BCE0309</p>
-<p>Contribution: Home page</p>
+<p>Contribution: Predict page, Results page</p>
 </div>
 </div>
 </div>
+   <h2>Feedback Form</h2>
+
+<form id="feedbackForm">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br><br>
+  
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br><br>
+  
+  <label for="feedback">Feedback:</label><br>
+  <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
+  
+  <button type="submit">Submit</button>
+</form></center>
+        
+        <footer class="krish" id="contact" >
+  <hr >
+  <h3>Reach out to us if you have any queries.</h3>
+  
+ <p>
+      VIT, Vellore <br>
+      India <br><br>
+  </p>
+<p>A team project by : 
+      Divyanshi, 
+      Krishna, 
+      Lohitha, 
+      Sandhi 
+  </p>
+<br>
+  <hr><center>
+  <div>
+      &copy; Copyright 2024. All Rights Reserved <a href="https://krishna2226.github.io/blue/">(GitHub Link for Our Project)</a>
+  </div></center>
+</footer>
+        <script>
+document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+  
+  // Get form data
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var feedback = document.getElementById('feedback').value;
+  
+  // Construct HTML for the feedback
+  var feedbackHTML = "<p><strong>Name:</strong> " + name + "</p>";
+  feedbackHTML += "<p><strong>Email:</strong> " + email + "</p>";
+  feedbackHTML += "<p><strong>Feedback:</strong> " + feedback + "</p>";
+  
+  // Save the feedback to a file or database or display it on the page
+  // For now, let's just display it on the page
+  var feedbackContainer = document.createElement('div');
+  feedbackContainer.innerHTML = feedbackHTML;
+  document.body.appendChild(feedbackContainer);
+  
+  // Clear form fields
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('feedback').value = '';
+});
+</script>
+
+    </body>
+</html>
 </body>
 </html>
