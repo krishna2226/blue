@@ -52,6 +52,22 @@
             </section>
         </div>
         </center>
+
+        <h2>Feedback Form</h2>
+
+<form id="feedbackForm">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br><br>
+  
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br><br>
+  
+  <label for="feedback">Feedback:</label><br>
+  <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
+  
+  <button type="submit">Submit</button>
+</form>
+        
         <footer class="krish" id="contact" >
   <hr >
   <h3>Reach out to us if you have any queries.</h3>
@@ -72,5 +88,32 @@
       &copy; Copyright 2024. All Rights Reserved <a href="https://krishna2226.github.io/blue/">(GitHub Link for Our Project)</a>
   </div></center>
 </footer>
+        <script>
+document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+  
+  // Get form data
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var feedback = document.getElementById('feedback').value;
+  
+  // Construct HTML for the feedback
+  var feedbackHTML = "<p><strong>Name:</strong> " + name + "</p>";
+  feedbackHTML += "<p><strong>Email:</strong> " + email + "</p>";
+  feedbackHTML += "<p><strong>Feedback:</strong> " + feedback + "</p>";
+  
+  // Save the feedback to a file or database or display it on the page
+  // For now, let's just display it on the page
+  var feedbackContainer = document.createElement('div');
+  feedbackContainer.innerHTML = feedbackHTML;
+  document.body.appendChild(feedbackContainer);
+  
+  // Clear form fields
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('feedback').value = '';
+});
+</script>
+
     </body>
 </html>
