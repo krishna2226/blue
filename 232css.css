@@ -25,13 +25,13 @@
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgb(21, 9, 9);
 }
-body{
-    background-image: url(https://static.vecteezy.com/system/resources/previews/000/204/490/non_2x/vector-techno-abstract-background.jpg);
+body1{
+    background-image: url('ss.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     
 }
-h1{
+head{
     letter-spacing: 1px;
     text-align: center;
     text-decoration: dashed;
